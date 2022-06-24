@@ -1,0 +1,15 @@
+<div *ngIf="element.type === 'image'">
+  <img src="{{element.url}}" style="width: 50%;">
+</div>
+
+<div *ngIf="element.type === 'indent'">
+  <div style="height: 15px"></div>
+</div>
+
+<div *ngIf="element.type === 'text'">
+  <p>{{element.content}}</p>
+</div>
+
+<div *ngIf="element.type === 'button'">
+  <a href="{{element.url}}">{{element.content}}</a>
+</div>

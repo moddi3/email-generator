@@ -1,0 +1,20 @@
+<div>
+  Column id: {{column.id}}
+  <div
+    class="example-list"
+    [id]="column.id.toString()"
+    cdkDropList
+    [cdkDropListData]="column.elements"
+    [cdkDropListConnectedTo]="connectedCol"
+    (cdkDropListDropped)="dropElement($event)"
+  >
+    <div
+      class="example-box element"
+      cdkDrag
+      *ngFor="let element of column.elements">
+      <app-element
+        [element]="element">
+      </app-element>
+    </div>
+  </div>
+</div>

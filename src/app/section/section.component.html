@@ -1,0 +1,23 @@
+<div>
+  Section id: {{section.id}}
+
+  <div
+    class="columns"
+    [id]="section.id.toString()"
+    cdkDropList
+    [cdkDropListData]="section.columns"
+    cdkDropListOrientation="horizontal"
+    (cdkDropListDropped)="drop($event)"
+    [cdkDropListConnectedTo]="connectedSection">
+    <div
+      class="column"
+      *ngFor="let column of section.columns"
+      cdkDrag
+      cdkDropListGroup
+      [cdkDragData]="column"
+    >
+    <app-column [column]="column"></app-column>
+  </div>
+  </div>
+
+</div>

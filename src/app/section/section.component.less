@@ -1,0 +1,29 @@
+.columns {
+  display: flex;
+  flex-direction: row;
+
+  .column {
+    padding: 10px;
+    border: 1px dashed #cccccc;
+    position: relative;
+    background-color: #fff;
+  }
+
+  .example-handle {
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 0;
+  }
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
